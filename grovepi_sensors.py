@@ -6,6 +6,7 @@ from grove_rgb_lcd import *
 
 # Grove Ultrasonic Ranger connectd to digital port 2
 ultrasonic_ranger = 2
+grovepi.pinMode(ultrasonic_ranger,"INPUT")
 # potentiometer connected to analog port A0 as input
 potentiometer = 0
 grovepi.pinMode(potentiometer,"INPUT")
