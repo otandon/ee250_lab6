@@ -24,13 +24,13 @@ while True:
 
     # TODO: read threshold from potentiometer
     analogval = grovepi.analogRead(potentiometer)
-    thres = round((float)(analogval / full_angle) * max_distance)
+    thres = (float) ((analogval / full_angle) * max_distance)
     
     # TODO: format LCD text according to threshhold
     if (distance < thres):
-      setText(str(thres) + " cm     OBJ PRES\n"+ str(distance) + " cm")
+      setText(thres + " cm     OBJ PRES\n"+ distance + " cm")
     else:
-      setText(str(thres) + " cm\n" + str(distance) + " cm")
+      setText(thres + " cm\n" + distance + " cm")
     time.sleep(1)
   except IOError:
     print("Error")
