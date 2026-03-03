@@ -26,12 +26,12 @@ while True:
     thres = round(analogval / full_angle * max_distance)
     
     # TODO: format LCD text according to threshhold
-    if (distance < thres): 
-      grovepi.setText(f"{str(thres)} cm     OBJ PRES")
+    if (distance < thres):
+      grovepi.setText(str(thres) + " cm     OBJ PRES")
     else:
-      grovepi.setText(f"{str(thres)} cm")
+      grovepi.setText(str(thres) + " cm")
     grovepi.setText("\n")
-    grovepi.setText(f"{str(distance)} cm")
+    grovepi.setText(str(distance) + " cm")
     
   except IOError:
     print("Error")
