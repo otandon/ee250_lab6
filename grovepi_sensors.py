@@ -11,7 +11,7 @@ potentiometer = 0
 grovepi.pinMode(potentiometer,"INPUT")
 
 # clear lcd screen  before starting main loop
-grovepi.setText("")
+setText("")
 
 full_angle = 1023
 max_distance = 517
@@ -27,11 +27,11 @@ while True:
     
     # TODO: format LCD text according to threshhold
     if (distance < thres):
-      grovepi.setText(str(thres) + " cm     OBJ PRES")
+      setText(str(thres) + " cm     OBJ PRES")
     else:
-      grovepi.setText(str(thres) + " cm")
-    grovepi.setText("\n")
-    grovepi.setText(str(distance) + " cm")
+      setText(str(thres) + " cm")
+    setText("\n")
+    setText(str(distance) + " cm")
     time.sleep(1)
   except IOError:
     print("Error")
