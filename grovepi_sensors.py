@@ -27,11 +27,9 @@ while True:
     
     # TODO: format LCD text according to threshhold
     if (distance < thres):
-      setText(str(thres) + " cm     OBJ PRES")
+      setText(str(thres) + " cm     OBJ PRES\n"+ str(distance) + " cm")
     else:
-      setText(str(thres) + " cm")
-    setText("\n")
-    setText(str(distance) + " cm")
+      setText(str(thres) + " cm\n" + str(distance) + " cm")
     time.sleep(1)
   except IOError:
     print("Error")
