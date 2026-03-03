@@ -17,6 +17,10 @@ setText("")
 full_angle = 1023
 max_distance = 517
 
+adc_ref = 5
+grove_vcc = 5
+
+
 while True:
   try:
     # TODO:read distance value from Ultrasonic Ranger and print distance on LCD
@@ -24,6 +28,7 @@ while True:
 
     # TODO: read threshold from potentiometer
     analogval = grovepi.analogRead(potentiometer)
+    print(analogval)
     thres = (float) ((analogval / full_angle) * max_distance)
     
     # TODO: format LCD text according to threshhold
