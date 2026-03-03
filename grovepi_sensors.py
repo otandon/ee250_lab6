@@ -32,6 +32,6 @@ while True:
       grovepi.setText(str(thres) + " cm")
     grovepi.setText("\n")
     grovepi.setText(str(distance) + " cm")
-    
+    time.sleep(1)
   except IOError:
     print("Error")
