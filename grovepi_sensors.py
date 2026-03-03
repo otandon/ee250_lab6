@@ -14,8 +14,8 @@ grovepi.pinMode(potentiometer,"INPUT")
 # clear lcd screen  before starting main loop
 setText("")
 
-full_angle = 1023
-max_distance = 517
+full_angle = 1023.0
+max_distance = 517.0
 
 adc_ref = 5
 grove_vcc = 5
