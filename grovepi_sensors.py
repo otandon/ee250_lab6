@@ -40,10 +40,11 @@ while True:
     else:
       text1 = str(thres) + " cm"
       text1 = ('{: <16}'.format(text1))
-    
+
     text2 = str(distance) + " cm"
     text2 = ('{: <16}'.format(text2))
     setText_norefresh(text1 + "\n" + text2)
     print(text1 + "\n" + text2)
+    time.sleep(1)
   except IOError:
     print("Error")
